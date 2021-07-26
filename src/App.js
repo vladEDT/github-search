@@ -11,14 +11,16 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <div className='container'>
-        <Alert alert={{type: 'primary'}} />
+      <div className='bg-secondary pt-3' style={{minHeight: '100vh'}}>
+        <div className='container '>
+          <Alert alert={{type: 'primary'}} />
 
-        <Switch>
-          <Route path='/profile/:name' component={Profile} />
-          <Route path='/about' component={About} />
-          <Route path='/' component={Home} />
-        </Switch>
+          <Switch>
+            <Route path='/profile/:name' component={Profile} />
+            <Route path='/about' component={About} />
+            <Route path='/' component={Home} />
+          </Switch>
+        </div>
       </div>
     </Router>
   )
