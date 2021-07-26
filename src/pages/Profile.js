@@ -1,5 +1,4 @@
 import {useContext, useEffect} from 'react'
-import {Link} from 'react-router-dom'
 import Repos from '../Components/Repos'
 import {GithubContext} from '../context/github/githubContext'
 
@@ -34,16 +33,16 @@ const Profile = ({match}) => {
 
   return (
     <>
-      <Link to='/' className='btn btn-link'>
-        Back to main page
-      </Link>
-
-      <div className='card'>
+      <div className='card bg-dark text-white'>
         <div className='card-body'>
           <div className='row'>
             <div className='col-sm-3 text-center'>
-              <img src={avatar_url} alt={name} style={{width: '150px'}} />
-              <h1>{name}</h1>
+              <img
+                src={avatar_url}
+                alt={name}
+                style={{width: '250px', borderRadius: '50%'}}
+              />
+              <h4>{name}</h4>
               {location && <p>Location: {location}</p>}
             </div>
             <div className='col'>
@@ -53,14 +52,7 @@ const Profile = ({match}) => {
                   <p>{bio}</p>
                 </>
               )}
-              <a
-                href={html_url}
-                target='_blank'
-                rel='noreferrer noopener'
-                className='btn btn-dark'
-              >
-                Open git profile
-              </a>
+
               <ul>
                 {login && (
                   <li>
@@ -82,14 +74,28 @@ const Profile = ({match}) => {
               <div className='badge bg-primary m-1'>Followers: {followers}</div>
               <div className='badge bg-success m-1'>Following: {following}</div>
 
-              <div className='badge bg-dark m-1'>Repos: {public_repos}</div>
+              <div className='badge bg-light text-dark m-1'>
+                Repos: {public_repos}
+              </div>
               <div className='badge bg-info m-1'>Gists: {public_gists}</div>
+              <div>
+                <a
+                  href={html_url}
+                  target='_blank'
+                  rel='noreferrer noopener'
+                  className='btn btn-light mt-4'
+                >
+                  Open git profile
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <Repos repos={repos} />
+      <div className='row' style={{display: 'flex', justifyContent: 'center'}}>
+        <Repos repos={repos} />
+      </div>
     </>
   )
 }
