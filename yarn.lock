@@ -9692,6 +9692,11 @@ selfsigned@^1.10.8:
   dependencies:
     node-forge "^0.10.0"
 
+semantic-ui-loader@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/semantic-ui-loader/-/semantic-ui-loader-2.3.1.tgz#b93d6b289eab1b733d28481760bd98f01fb3b1e9"
+  integrity sha512-mOzzJDMKp255O1HlEhAKO3Qf73C8V+8h1z9LJforTZuGyVIAaoX4o9W1vkXGfxDFhNVR5cSkILTIPlZmCKY1dw==
+
 "semver@2 || 3 || 4 || 5", semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"

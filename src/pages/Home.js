@@ -1,5 +1,6 @@
 import {useContext} from 'react'
 import Card from '../Components/Card'
+import Loader from '../Components/Loader'
 import Search from '../Components/Search'
 import {GithubContext} from '../context/github/githubContext'
 
@@ -10,7 +11,7 @@ const Home = () => {
       <Search />
       <div className='row'>
         {loading ? (
-          <p className='text-center'>Loading</p>
+          <Loader />
         ) : (
           users.map(user => (
             <div className='col-sm-4' key={user.id}>
