@@ -1,4 +1,5 @@
 import {useContext, useEffect} from 'react'
+import Loader from '../Components/Loader'
 import Repos from '../Components/Repos'
 import {GithubContext} from '../context/github/githubContext'
 
@@ -13,7 +14,7 @@ const Profile = ({match}) => {
   }, [])
 
   if (loading) {
-    return <p className='text-center'>Loading...</p>
+    return <Loader />
   }
 
   const {

@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'semantic-ui-loader/loader.min.css'
 
 import Navbar from './Components/Navbar'
 import Home from './pages/Home'
